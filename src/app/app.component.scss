@@ -1,0 +1,39 @@
+.navbar-custom{
+    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: #A1A483;
+    .navbar-collapse{
+        flex-grow: unset;
+    }
+    a.nav-link{
+        color: #fff;
+    }
+}
+
+.discount-section{
+    border-bottom: 1px solid #F3F3F3;
+    text-align: center;
+}
+
+.living-room-section{
+    background: url(../assets/living-room-section-bg.png);
+    height: 568px
+}
+.design-solution-image{
+    background: url(../assets/design-solution-bg.png);
+    height:600px;
+}
+
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 2px solid #F3F3F3;
+    padding: 20px 0;
+    .best-prod{
+        width:300px;
+    }
+}
+
+
+  
