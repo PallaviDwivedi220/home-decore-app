@@ -8,8 +8,7 @@ import { SubHeaderComponent } from './sub-header/sub-header.component';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    HeaderComponent,
-    SubHeaderComponent
+    HeaderComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
