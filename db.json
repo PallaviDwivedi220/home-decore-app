@@ -1,0 +1,170 @@
+{
+    "data": {
+        "headerLinks" : [
+            {
+                "name": "About Us",
+                "url": "/about-us",
+                "sublinks": []
+            },
+            {
+                "name": "Contact Us",
+                "url": "/contact-us",
+                "sublinks": []
+            },
+            {
+                "name": "Offers",
+                "url": "/offers",
+                "sublinks": []
+            },
+            {
+                "name": "Login",
+                "url": "/login",
+                "sublinks": []
+            }
+        ],
+        "subHeaderLinks" : [
+            {
+                "name": "Living Room",
+                "url": "/living-room"
+            },
+            {
+                "name": "Bedroom",
+                "url": "/bedroom"
+            },
+            {
+                "name": "Bathroom",
+                "url": "/bathroom"
+            },
+            {
+                "name": "Kitchen",
+                "url": "/kitchen"
+            }
+        ],
+        "bannerCarousel" : [
+            {
+                "id": 0,
+                "imageUrl": "https://cms.landmarkshops.in/Home-Centre/Test-UI/HC-Uber-HP-Desktop-HeroBanner7-03Apr25.gif",
+                "link": "",
+                "altText": "Offer image 1"
+            },
+            {
+                "id": 1,
+                "imageUrl": "https://cms.landmarkshops.in/Home-Centre/Test-UI/HC-Uber-HP-Desktop-HeroBanner4-27Mar25.gif",
+                "link": "",
+                "altText": "Offer image 2"
+            },
+            {
+                "id": 2,
+                "imageUrl": "https://cms.landmarkshops.in/cdn-cgi/image/w=1440,q=85,fit=cover//Home-Centre/Test-UI/HC-Uber-HP-Desktop-HeroBanner2-31Mar2025.jpg",
+                "link": "",
+                "altText": "Offer image 3"
+            },
+            {
+                "id": 3,
+                "imageUrl": "https://cms.landmarkshops.in/cdn-cgi/image/w=1440,q=85,fit=cover/Home-Centre/Test-UI/HC-Uber-HP-Desktop-HeroBanner6-04Apr2025.jpg",
+                "link": "",
+                "altText": "Offer image 4"
+            }
+        ],
+        "bestSellers": [
+            {
+                "name": "Shelves",
+                "image": "/assets/best-sellers/best-shelves.png",
+                "price": "₹4000",
+                "link": ""
+            },
+            {
+                "name": "Bench",
+                "image": "/assets/best-sellers/best-bench.png",
+                "price": "₹2000",
+                "link": ""
+            },
+            {
+                "name": "Coffee Table",
+                "image": "/assets/best-sellers/best-coffee-table.png",
+                "price": "₹50000",
+                "link": ""
+            },
+            {
+                "name": "Table & Chairs Set",
+                "image": "/assets/best-sellers/best-table-chair.png",
+                "price": "₹10000",
+                "link": ""
+            },
+            {
+                "name": "Cabinet",
+                "image": "/assets/best-sellers/best-cabinet.png",
+                "price": "₹6000",
+                "link": ""
+            },
+            {
+                "name": "Arm Chair",
+                "image": "/assets/best-sellers/best-armchair.png",
+                "price": "₹4000",
+                "link": ""
+            },
+            {
+                "name": "Sofa",
+                "image": "/assets/best-sellers/best-sofa.png",
+                "price": "₹15000",
+                "link": ""
+            },
+            {
+                "name": "Lights",
+                "image": "/assets/best-sellers/best-light.png",
+                "price": "₹1000",
+                "link": ""
+            }
+        ],
+        "featuredCategories": [
+            {
+                "isNew": true,
+                "name": "Decor & Wellness",
+                "image": "/assets/vase.png",
+                "backgroundColor": "#DCEEEE",
+                "link": ""
+            },
+            {
+                "isNew": false,
+                "name": "Kitchen & Dining",
+                "image": "/assets/plates.png",
+                "backgroundColor": "#E1E4C2",
+                "link": ""
+            },
+            {
+                "isNew": false,
+                "name": "Shop Furniture",
+                "image": "/assets/chair.png",
+                "backgroundColor": "#F3EFE1",
+                "link": ""
+            }
+
+        ],
+        "features": [
+            {
+                "icon": "/assets/features/clock.png",
+                "title": "Long-life objects",
+                "subtext": "These items offer exceptional quality, resilience, and lasting performance."
+            },
+            {
+                "icon": "/assets/features/shipping.png",
+                "title": "Fast Shipping",
+                "subtext": "Shop with confidence and enjoy hassle-free, quick shipping every time!"
+            },
+            {
+                "icon": "/assets/features/wallet.png",
+                "title": "10% Cashback",
+                "subtext": "No hidden fees—just straightforward cashback on every eligible purchase."
+            }
+
+        ]
+    }
+}
+
+
+
+
+
+
+
+

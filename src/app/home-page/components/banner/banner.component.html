@@ -1,0 +1,38 @@
+<!-- <section class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-6">
+            <p class="lead">NEW COLLECTION</p>
+            <h1 class="display-4">The Beauty Of Design</h1>
+            <p class="lead">Both functional and decorative, which feels artisan-made but has a contemporary look.</p>
+            <p class="lead">
+              <a class="btn btn-dark btn-lg" href="#" role="button">Explore</a>
+            </p>
+          </div>
+          <div class="col-6">
+            <img src ="../../assets/banner-img.png" alt="logo" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+</section> -->
+
+
+<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let current of bannerCarousel" [ngClass]="{'active': current.id ==0}">
+      <a [href]="current.link">
+        <img [src]="current.imageUrl" class="d-block w-100" [alt]="current.altText">
+      </a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

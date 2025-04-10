@@ -1,0 +1,16 @@
+.navbar-custom{
+    justify-content: space-between;
+    text-transform: uppercase;
+    .navbar-nav{
+        align-items: center;
+    }
+    .navbar-collapse{
+        flex-grow: unset;
+    }
+    a.nav-link{
+        color: #fff;
+    }
+    .input-group-text, input{
+        border-radius: 0;
+    }
+}

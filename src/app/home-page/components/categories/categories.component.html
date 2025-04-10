@@ -1,0 +1,14 @@
+<section class="container py-5">
+  <div class="row">
+    <div class="col-md-4 text-center mr-2" *ngFor="let feature of featuredCategories" [ngStyle]="{'background-color': feature.backgroundColor}">
+      <span *ngIf="feature.isNew">NEW COLLECTION</span>
+      <h3>
+        {{feature.name}}
+      </h3>
+      <div>
+        <a [href]="feature.link" class="btn btn-dark">SHOW MORE</a>
+      </div>
+      <img [src]="feature.image" [alt]="feature.name">
+    </div>
+  </div>
+</section>
