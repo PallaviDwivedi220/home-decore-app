@@ -7,21 +7,11 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="col-10">
-        <form class="d-flex" role="search">
-          <div class="input-group">
-            <span class="input-group-text">
-              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" class="DocSearch-Search-Icon"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </span>
-            <input class="form-control input-lg focus-ring focus-ring-light" type="search" placeholder="What are you looking for?" aria-label="Search">
-            <!-- <span class="input-group-text">x</span> -->
-          </div>
-        </form>
-      </div>
+      <app-autocomplete></app-autocomplete>
     </div>
     <!-- <div class="col-sm-4">
       <input id="searchMedia" type="text" class="form-control" #searchMedia
-          [(ngModel)]="mediaItems.name" 
+          [(ngModel)]="searchProducts" 
           [ngbTypeahead]="search" 
           [resultFormatter]="formatter" 
           [inputFormatter]="formatter"

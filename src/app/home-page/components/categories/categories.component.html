@@ -1,6 +1,7 @@
 <section class="container py-5">
-  <div class="row">
-    <div class="col-md-4 text-center mr-2" *ngFor="let feature of featuredCategories" [ngStyle]="{'background-color': feature.backgroundColor}">
+  <div class="row justify-content-center">
+    <div class="col-md-3 text-center mx-3 category" *ngFor="let feature of featuredCategories" 
+         [ngStyle]="{'background': feature.backgroundColor+' url('+feature.image+') no-repeat bottom'}">
       <span *ngIf="feature.isNew">NEW COLLECTION</span>
       <h3>
         {{feature.name}}
@@ -8,7 +9,6 @@
       <div>
         <a [href]="feature.link" class="btn btn-dark">SHOW MORE</a>
       </div>
-      <img [src]="feature.image" [alt]="feature.name">
     </div>
   </div>
 </section>

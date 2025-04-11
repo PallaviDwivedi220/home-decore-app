@@ -37,6 +37,11 @@ export interface Features{
     subtext: string
 }
 
+export interface SearchProducts{
+    name: string,
+    link: string
+}
+
 export interface HomepageData {
     headerLinks: HeaderLinks[];
     subHeaderLinks: SubHeader[];
@@ -44,6 +49,7 @@ export interface HomepageData {
     bannerCarousel: BannerCarousel[];
     featuredCategories: FeaturedCategories[];
     features: Features[];
+    searchProducts: SearchProducts[];
   }
 
 

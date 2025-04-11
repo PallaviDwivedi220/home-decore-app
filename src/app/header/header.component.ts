@@ -5,7 +5,10 @@ import { HomepageDataService } from '../home-page/homepage-data.service';
 import { HomepageData } from '../home-page/homepage-interfaces';
 import { SubHeaderComponent } from '../sub-header/sub-header.component';
 import { Observable, OperatorFunction, Subscription } from 'rxjs';
-// import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+import { FormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+import { AutocompleteComponent } from '../autocomplete/autocomplete.component';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +18,8 @@ import { Observable, OperatorFunction, Subscription } from 'rxjs';
     RouterLink,
     RouterLinkActive,
     CommonModule,
-    SubHeaderComponent
+    SubHeaderComponent,
+    AutocompleteComponent
   ],
   standalone: true
 })
@@ -23,8 +27,10 @@ import { Observable, OperatorFunction, Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy{
 
   private subscription: Subscription | undefined;
-  headerLinks: HomepageData['headerLinks'] | null = null
-  //searchProducts: SearchProducts[] = [];
+  headerLinks: HomepageData['headerLinks'] = []
+  searchProducts: HomepageData['searchProducts'] = [];
+  
+  formatter = (result: any) => result.name;
   
   constructor(private homepageDataService: HomepageDataService){}
 
@@ -40,10 +46,13 @@ export class HeaderComponent implements OnInit, OnDestroy{
   async ngOnInit(): Promise<void> {
     this.subscription = this.homepageDataService.homepageData$.subscribe({
       next: (data) => {
-        this.headerLinks = data.headerLinks;        
+        this.headerLinks = data.headerLinks;  
+        this.searchProducts = data.searchProducts;    
+        console.log(this.searchProducts);
       },
       error: (err) => {
         this.headerLinks = [];
+        this.searchProducts = [];  
       },
     });
   }
