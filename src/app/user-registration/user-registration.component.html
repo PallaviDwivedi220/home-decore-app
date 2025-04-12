@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h2>User Registration</h2>
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" formControlName="firstName">
+                    <div *ngIf="f['firstName'].invalid && (submitted || f['firstName'].touched)" class="error-message">
+                    <div *ngIf="f['firstName'].errors?.['required']">First Name is required.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" formControlName="lastName">
+                    <div *ngIf="f['lastName'].invalid && (submitted || f['lastName'].touched)" class="error-message">
+                    <div *ngIf="f['lastName'].errors?.['required']">Last Name is required.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" formControlName="email">
+                    <div *ngIf="f['email'].invalid && (submitted || f['email'].touched)" class="error-message">
+                    <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+                    <div *ngIf="f['email'].errors?.['email']">Please enter a valid email address.</div>
+                    </div>
+                </div>
+
+                <div formGroupName="passwordGroup">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" formControlName="password">
+                    <div *ngIf="passwordGroup.controls['password'].invalid && (submitted || passwordGroup.controls['password'].touched)" class="error-message">
+                    <div *ngIf="passwordGroup.controls['password'].errors?.['required']">Password is required.</div>
+                    <div *ngIf="passwordGroup.controls['password'].errors?.['minlength']">Password must be at least 6 characters long.</div>
+                    </div>
+
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" formControlName="confirmPassword">
+                    <div *ngIf="passwordGroup.controls['confirmPassword'].invalid && (submitted || passwordGroup.controls['confirmPassword'].touched)" class="error-message">
+                    <div *ngIf="passwordGroup.controls['confirmPassword'].errors?.['required']">Confirm Password is required.</div>
+                    </div>
+                    <div *ngIf="passwordGroup.errors?.['passwordMismatch']" class="error-message">Passwords do not match.</div>
+                </div>
+
+                <div>
+                    <label for="phone">Phone (Optional):</label>
+                    <input type="text" id="phone" formControlName="phone">
+                    <div *ngIf="f['phone'].invalid && (submitted || f['phone'].touched)" class="error-message">
+                    <div *ngIf="f['phone'].errors?.['pattern']">Please enter a valid 10-digit phone number.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" formControlName="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="terms" formControlName="terms">
+                    <label for="terms">I agree to the terms and conditions</label>
+                    <div *ngIf="f['terms'].invalid && (submitted || f['terms'].touched)" class="error-message">
+                    <div *ngIf="f['terms'].errors?.['requiredTrue']">You must agree to the terms and conditions.</div>
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+                <button type="button" (click)="onReset()">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
+

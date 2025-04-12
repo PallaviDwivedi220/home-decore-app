@@ -1,9 +1,11 @@
-<section class="container py-5">
+<section class="container pt-5">
   <div class="row justify-content-center">
     <div class="col-md-3 text-center mx-3 category" *ngFor="let feature of featuredCategories" 
          [ngStyle]="{'background': feature.backgroundColor+' url('+feature.image+') no-repeat bottom'}">
-      <span *ngIf="feature.isNew">NEW COLLECTION</span>
-      <h3>
+      <div class="mb-3">
+        <span *ngIf="feature.isNew">NEW COLLECTION</span>
+      </div>
+      <h3 class="col-md-6 mx-auto">
         {{feature.name}}
       </h3>
       <div>

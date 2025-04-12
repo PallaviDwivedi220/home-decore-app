@@ -1,11 +1,9 @@
-<section class="container text-center">
+<section class="container features-section">
   <div class="row">
     <div class="col-md-4" *ngFor="let feature of features">
-      <div>
-        <img [src]="feature.icon" [alt]="feature.title">
-      </div>
-      <div>{{feature.title}}</div>
-      <div>{{feature.subtext}}</div>
+      <img [src]="feature.icon" [alt]="feature.title">
+      <div class="title">{{feature.title}}</div>
+      <div class="subtitle">{{feature.subtext}}</div>
     </div>
   </div>
 </section>

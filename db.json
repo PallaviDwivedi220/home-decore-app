@@ -1,27 +1,5 @@
 {
     "data": {
-        "headerLinks" : [
-            {
-                "name": "About Us",
-                "url": "/about-us",
-                "sublinks": []
-            },
-            {
-                "name": "Contact Us",
-                "url": "/contact-us",
-                "sublinks": []
-            },
-            {
-                "name": "Offers",
-                "url": "/offers",
-                "sublinks": []
-            },
-            {
-                "name": "Login",
-                "url": "/login",
-                "sublinks": []
-            }
-        ],
         "subHeaderLinks" : [
             {
                 "name": "Living Room",
@@ -76,51 +54,59 @@
         ],
         "bestSellers": [
             {
+                "id": 0,
                 "name": "Shelves",
                 "image": "/assets/best-sellers/best-shelves.png",
-                "price": "₹4000",
+                "price": "4000",
                 "link": ""
             },
             {
+                "id": 1,
                 "name": "Bench",
                 "image": "/assets/best-sellers/best-bench.png",
-                "price": "₹2000",
+                "price": "2000",
                 "link": ""
             },
             {
+                "id": 2,
                 "name": "Coffee Table",
                 "image": "/assets/best-sellers/best-coffee-table.png",
-                "price": "₹50000",
+                "price": "50000",
                 "link": ""
             },
             {
+                "id": 3,
                 "name": "Table & Chairs Set",
                 "image": "/assets/best-sellers/best-table-chair.png",
-                "price": "₹10000",
+                "price": "10000",
                 "link": ""
             },
             {
+                "id": 4,
                 "name": "Cabinet",
                 "image": "/assets/best-sellers/best-cabinet.png",
-                "price": "₹6000",
+                "price": "6000",
                 "link": ""
             },
             {
+                "id": 5,
                 "name": "Arm Chair",
                 "image": "/assets/best-sellers/best-armchair.png",
-                "price": "₹4000",
+                "price": "4000",
                 "link": ""
             },
             {
+                "id": 6,
                 "name": "Sofa",
                 "image": "/assets/best-sellers/best-sofa.png",
-                "price": "₹15000",
+                "price": "15000",
                 "link": ""
             },
             {
+                "id": 7,
                 "name": "Lights",
                 "image": "/assets/best-sellers/best-light.png",
-                "price": "₹1000",
+                "price": "1000",
                 "link": ""
             }
         ],

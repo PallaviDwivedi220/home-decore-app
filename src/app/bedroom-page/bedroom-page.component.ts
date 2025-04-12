@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-bedroom-page',
-  standalone: false,
+  standalone: true,
   templateUrl: './bedroom-page.component.html',
   styleUrl: './bedroom-page.component.scss'
 })

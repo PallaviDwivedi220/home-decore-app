@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HomepageDataService } from '../../homepage-data.service';
 import { BestsellerProducts } from '../../homepage-interfaces';
 import { Subscription } from 'rxjs';
+import { CartService } from '../../../cart.service';
 
 @Component({
   selector: 'app-best-sellers',
@@ -14,8 +15,9 @@ export class BestSellersComponent implements OnInit, OnDestroy {
   bestSellerProducts: BestsellerProducts[] = [];
   loading: boolean = true;
   error: any;
+  addedToCart: { [key: string]: boolean } = {};
 
-  constructor(private homepagedataService: HomepageDataService) {}
+  constructor(private homepagedataService: HomepageDataService, private cartService:CartService) {}
 
   ngOnInit(): void {
     this.subscription = this.homepagedataService.homepageData$.subscribe({
@@ -37,4 +39,13 @@ export class BestSellersComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+    this.addedToCart[product.id] = true;
+    setTimeout(() => {
+      this.addedToCart[product.id] = false;
+    }, 3000);;
+  }
+  
 }

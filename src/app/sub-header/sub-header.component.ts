@@ -22,7 +22,6 @@ export class SubHeaderComponent implements OnInit, OnDestroy{
     this.subscription = this.homepageDataService.homepageData$.subscribe({
       next: (data) => {
         this.subHeaderLinks = data.subHeaderLinks; 
-        console.log(this.subHeaderLinks);       
       },
       error: (err) => {
         this.subHeaderLinks = []; 

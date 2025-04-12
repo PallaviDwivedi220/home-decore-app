@@ -9,8 +9,25 @@
     }
     a.nav-link{
         color: #fff;
+        position: relative;
     }
     .input-group-text, input{
         border-radius: 0;
     }
 }
+.cart-link{
+    position: relative;
+    cursor: pointer;
+    .cart-count{
+        position: absolute;
+        background: #cc711d;
+        width: 24px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+        padding: 2px;
+        left: 36px;
+        bottom: 34px;
+    }
+}
+

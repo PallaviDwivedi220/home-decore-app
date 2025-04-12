@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-bathroom-page',
-  standalone: false,
+  standalone: true,
   templateUrl: './bathroom-page.component.html',
   styleUrl: './bathroom-page.component.scss'
 })
