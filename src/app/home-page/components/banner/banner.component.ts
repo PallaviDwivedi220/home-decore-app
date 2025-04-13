@@ -3,6 +3,7 @@ import { HomepageDataService } from '../../homepage-data.service';
 import { BannerCarousel } from '../../homepage-interfaces';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',

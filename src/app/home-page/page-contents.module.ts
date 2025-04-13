@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BannerComponent } from '../home-page/components/banner/banner.component';
@@ -7,7 +7,6 @@ import { CategoriesComponent } from '../home-page/components/categories/categori
 import { FeaturesComponent } from '../home-page/components/features/features.component';
 import { BestSellersComponent } from '../home-page/components/best-sellers/best-sellers.component';
 import { NewArrivalsComponent } from '../home-page/components/new-arrivals/new-arrivals.component';
-import { NgOptimizedImage } from '@angular/common';
 import { PartnersComponent } from './components/partners/partners.component';
 
 @NgModule({
@@ -21,8 +20,7 @@ import { PartnersComponent } from './components/partners/partners.component';
     PartnersComponent
     ],
   imports: [
-    CommonModule,
-    NgOptimizedImage,
+    CommonModule
 ],
   exports : [
     BannerComponent, 
@@ -34,4 +32,5 @@ import { PartnersComponent } from './components/partners/partners.component';
     PartnersComponent
   ]
 })
-export class PageContentsModule { }
+export class PageContentsModule {}
+  

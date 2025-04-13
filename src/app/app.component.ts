@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  standalone: true
+  standalone: true,
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   title = 'home-decore-app';

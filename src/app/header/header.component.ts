@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { SubHeaderComponent } from '../sub-header/sub-header.component';
@@ -16,7 +16,8 @@ import { CartService } from '../cart.service';
     CommonModule,
     SubHeaderComponent,
     AutocompleteComponent],
-  standalone: true
+  standalone: true,
+  encapsulation: ViewEncapsulation.None
 })
 
 export class HeaderComponent implements OnInit, OnDestroy{

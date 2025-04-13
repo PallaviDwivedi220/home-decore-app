@@ -1,8 +1,3 @@
-.navbar-subheader{
-    justify-content: center;
-    background: white;
-    display: flex;
-}
 .activeLink{
     color: #9e833f;
     font-weight: 500;
@@ -16,6 +11,8 @@
     overflow-x: auto;
 }
 .navbar-subheader {
+    background: white;
+    display: flex;
     justify-content: center;
     overflow: auto;
     flex-wrap: nowrap;
@@ -23,7 +20,7 @@
     height: 70px;
     a{
         display: inline-block;
-        padding: 0 20px;
+        padding: 10px 20px;
     }
 }
     
