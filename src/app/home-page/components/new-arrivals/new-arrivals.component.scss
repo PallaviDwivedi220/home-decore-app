@@ -1,9 +1,14 @@
 .living-room-section{
-    background: url(../../../../assets/living-room-section-bg.png) no-repeat;
+    background: url(../../../../assets/new-arrivals-bg.png) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 568px;
+    color: white;
+    button{
+        width: 196px;
+    }
 } 
+
 @media screen and (max-width: 768px) {
     .living-room-section{
         background: url(../../../../assets/living-room-section-mweb.png) no-repeat;
