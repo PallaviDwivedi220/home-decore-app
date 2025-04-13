@@ -1,0 +1,117 @@
+<div class="container mt-4">
+    <header class="bg-light p-3 mb-4 rounded">
+      <h1 class="display-4">Project Overview</h1>
+    </header>
+  
+    <main>
+      <article class="mb-4">
+        <p class="lead">"I have been working on an Angular-based e-commerce web application called Home Decore App, which is designed to provide users with a seamless shopping experience for home decor products. The application is built with a modular architecture to ensure scalability and maintainability."</p>
+      </article>
+  
+      <section class="mb-5">
+        <h2 class="mb-3 border-bottom pb-2">Key Features</h2>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Dynamic Product Pages:</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Implemented reusable components like <span class="badge bg-secondary">BestSellersComponent</span>, <span class="badge bg-secondary">NewArrivalsComponent</span>, and <span class="badge bg-secondary">CategoriesComponent</span> to display dynamic product listings.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Used Angular's <span class="badge bg-info">*ngFor</span> and <span class="badge bg-info">*ngIf</span> directives for rendering data-driven UI elements.</li>
+          </ul>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Lazy Loading and Optimization:</h3>
+          <p>Configured lazy loading for feature modules like <span class="badge bg-secondary">LivingRoom</span>, <span class="badge bg-secondary">Bedroom</span>, and <span class="badge bg-secondary">Kitchen</span> using Angular's <span class="badge bg-info">loadComponent</span> and <span class="badge bg-info">loadChildren</span> for better performance and reduced initial load time.</p>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">State Management:</h3>
+          <p>Integrated a shared service for managing the cart state across components, ensuring real-time updates to the cart count in the header.</p>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Responsive Design:</h3>
+          <p>Used Bootstrap for responsive layouts and styled components like the <span class="badge bg-secondary">header</span>, <span class="badge bg-secondary">sub-header</span>, and modals to ensure compatibility across devices.</p>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Reusable Modules:</h3>
+          <p>Created a <span class="badge bg-secondary">PageContentsModule</span> to encapsulate and reuse components like banners, discounts, and partner sections across the application.</p>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Authentication:</h3>
+          <p>Developed a <span class="badge bg-secondary">LoginComponent</span> and <span class="badge bg-secondary">RegisterComponent</span> with form validations using Angular's <span class="badge bg-info">ReactiveFormsModule</span> to ensure secure user authentication.</p>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Search Functionality:</h3>
+          <p>Added an <span class="badge bg-secondary">AutocompleteComponent</span> for product search, enhancing the user experience with real-time suggestions.</p>
+        </section>
+  
+        <section class="mb-4">
+          <h3 class="h4 mb-3">Custom Modals:</h3>
+          <p>Implemented modals for login and registration using Bootstrap, ensuring a smooth user interaction flow.</p>
+        </section>
+  
+      </section>
+  
+      <section class="mb-5">
+        <h2 class="mb-3 border-bottom pb-2">Technical Stack</h2>
+        <dl class="row">
+          <dt class="col-sm-4 fw-bold">Frontend Framework:</dt>
+          <dd class="col-sm-8">Angular (leveraging features like lazy loading, reactive forms, and modular architecture).</dd>
+  
+          <dt class="col-sm-4 fw-bold">Styling:</dt>
+          <dd class="col-sm-8">SCSS and Bootstrap for responsive and visually appealing UI.</dd>
+  
+          <dt class="col-sm-4 fw-bold">State Management:</dt>
+          <dd class="col-sm-8">Shared services for managing cart and user session states.</dd>
+  
+          <dt class="col-sm-4 fw-bold">Routing:</dt>
+          <dd class="col-sm-8">Angular Router for navigation and dynamic route handling.</dd>
+  
+          <dt class="col-sm-4 fw-bold">Performance Optimization:</dt>
+          <dd class="col-sm-8">Lazy loading and reusable components to reduce bundle size and improve performance.</dd>
+        </dl>
+      </section>
+  
+      <section class="mb-5">
+        <h2 class="mb-3 border-bottom pb-2">Challenges and Solutions</h2>
+        <article class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Challenge: Ensuring Performance</h5>
+            <p class="card-text">Ensuring the application remains performant with a growing number of components and features.</p>
+            <p class="card-text"><strong>Solution:</strong> Used lazy loading for feature modules and optimized reusable components.</p>
+          </div>
+        </article>
+  
+        <article class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Challenge: State Management</h5>
+            <p class="card-text">Managing shared state across components like the cart count.</p>
+            <p class="card-text"><strong>Solution:</strong> Implemented a shared service with BehaviorSubject to handle state updates in real time.</p>
+          </div>
+        </article>
+  
+        <article class="card">
+          <div class="card-body">
+            <h5 class="card-title">Challenge: Bootstrap Integration</h5>
+            <p class="card-text">Integrating Bootstrap JavaScript with Angular.</p>
+            <p class="card-text"><strong>Solution:</strong> Properly configured <span class="badge bg-dark">bootstrap.bundle.min.js</span> in <span class="badge bg-dark">angular.json</span> and resolved conflicts with Angular's encapsulation using <span class="badge bg-dark">ViewEncapsulation.None</span>.</p>
+          </div>
+        </article>
+      </section>
+  
+      <aside class="alert alert-info" role="alert">
+        <details>
+          <summary class="fw-bold">Additional Notes</summary>
+          <p class="mt-2">This project demonstrates practical application of Angular concepts and front-end development best practices.</p>
+        </details>
+      </aside>
+  
+      <footer class="blockquote-footer mt-5 py-3 bg-light rounded">
+        <p class="mb-0">"This project allowed me to gain hands-on experience with Angular's advanced features like lazy loading, reactive forms, and modular architecture. It also helped me improve my problem-solving skills by addressing real-world challenges like state management and performance optimization in a large-scale application."</p>
+      </footer>
+    </main>
+  </div>

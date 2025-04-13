@@ -1,0 +1,77 @@
+.app-overview-container {
+    font-family: sans-serif;
+    line-height: 1.6;
+  
+    header {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    main {
+      padding: 1rem;
+    }
+  
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-top: 1.5rem;
+    }
+  
+    h3 {
+      margin-top: 1rem;
+    }
+  
+    ul, ol {
+      margin-left: 2rem;
+    }
+  
+    dl {
+      margin-bottom: 1rem;
+    }
+  
+    dt {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+  
+    dd {
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .component-name,
+    .module-name,
+    .directive,
+    .method,
+    .file-name,
+    .code {
+      background-color: #e0e0e0;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  
+    aside {
+      margin-top: 1rem;
+      details {
+        padding: 0.5rem;
+        background-color: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0.25rem;
+      }
+    }
+  
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      font-style: italic;
+    }
+  }
