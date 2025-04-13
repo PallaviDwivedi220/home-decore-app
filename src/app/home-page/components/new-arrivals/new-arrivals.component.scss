@@ -4,3 +4,10 @@
     background-size: cover;
     height: 568px;
 } 
+@media screen and (max-width: 768px) {
+    .living-room-section{
+        background: url(../../../../assets/living-room-section-mweb.png) no-repeat;
+        background-size: contain;
+        height: 244px;
+    }
+}

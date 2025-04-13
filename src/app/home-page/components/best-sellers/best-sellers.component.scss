@@ -32,3 +32,16 @@
         color: green;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .products-container .best-prod{
+        width: 186px;
+    }
+    svg{
+        width: 30px;
+    }
+    label{
+        font-size: 14px;
+    }
+    
+}

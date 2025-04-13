@@ -8,3 +8,22 @@
     font-weight: 500;
     border-bottom:  4px solid #9e833f;
 }
+.navbar-nav{
+    display: flex;
+    flex-direction: row!important;
+    justify-content: center;
+    gap: 16px;
+    overflow-x: auto;
+}
+.navbar-subheader {
+    justify-content: center;
+    overflow: auto;
+    flex-wrap: nowrap;
+    display: flex;
+    height: 70px;
+    a{
+        display: inline-block;
+        padding: 0 20px;
+    }
+}
+    

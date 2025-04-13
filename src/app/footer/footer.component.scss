@@ -1,4 +1,14 @@
 .footer-container{
     height: 631px;
-    background: url(../../assets/footer-section.svg);
+    background: url(../../assets/footer-section.svg) no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container{
+        height: 324px;
+        background-size: contain;
+        background: url(../../assets/footer-section-mweb.png) no-repeat;
+    }
+    
 }

@@ -1,8 +1,13 @@
 .navbar-custom{
     justify-content: space-between;
     text-transform: uppercase;
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
     .navbar-nav{
+        display: flex;
+        flex-direction: row!important;
         align-items: center;
+        gap:16px
     }
     .navbar-collapse{
         flex-grow: unset;
@@ -28,6 +33,18 @@
         padding: 2px;
         left: 36px;
         bottom: 34px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-custom{
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+    .cart-link{
+        svg{
+            width: 30px;
+        }
     }
 }
 

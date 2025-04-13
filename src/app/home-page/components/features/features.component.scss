@@ -1,6 +1,6 @@
 .features-section{
     text-align: center;
-    padding:70px 0;
+    padding:70px 30px;
     img{
         margin-bottom: 20px;;
     }
@@ -12,4 +12,23 @@
     .subtitle{
         font-size: 17px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .features-section{
+        .col-md-4:not(:last-child){
+            margin-bottom: 80px;
+        }
+        img{
+            margin-bottom: 0;
+            width: 42px;
+        }
+        .subtitle{
+            font-size: 14px;
+        }
+        .title{
+            font-size: 20px;
+        }
+    }
+    
 }

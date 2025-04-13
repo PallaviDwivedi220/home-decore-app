@@ -154,6 +154,7 @@
         ],
         "searchProducts": [
             { "name": "Velvet Throw Pillow", "link": "/product/velvet-throw-pillow" },
+            { "name": "Sofa", "link": "/product/sofa" },
             { "name": "Wooden Coffee Table", "link": "/product/wooden-coffee-table" },
             { "name": "Cotton Bed Sheets", "link": "/product/cotton-bed-sheets" },
             { "name": "Modern Floor Lamp", "link": "/product/modern-floor-lamp" },
