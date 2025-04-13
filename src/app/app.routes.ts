@@ -40,21 +40,35 @@ export const routes: Routes = [
     {
         path: 'wellness',
         loadComponent: () => import('./wellness/wellness.component').then(c => c.WellnessComponent),
-        'title': 'Wellness'
+        title: 'Wellness'
     },
     {
         path: 'gifting',
         loadComponent: () => import('./gifting/gifting.component').then(c => c.GiftingComponent),
-        'title': 'Gifting'
+        title: 'Gifting'
     },
     {
         path: 'cart',
         loadComponent: () => import('./cart-page/cart-page.component').then(c => c.CartPageComponent),
-        'title': 'Cart'
+        title: 'Cart',
+        data: {hideSubheader: 'true'}
     },
     {
         path: 'about',
         loadComponent: () => import('./project-overview/project-overview.component').then(c => c.ProjectOverviewComponent),
-        'title': 'About'
+        title: 'About Project',
+        data: {hideSubheader: 'true'}
+    },
+    {
+        path: 'login',
+        loadComponent: () => import('./user-login/user-login.component').then(c => c.UserLoginComponent),
+        title: 'Login',
+        data: {hideSubheader: 'true'}
+    },
+    {
+        path: 'sign-up',
+        loadComponent: () => import('./user-registration/user-registration.component').then(c => c.UserRegistrationComponent),
+        title: 'Sign Up',
+        data: {hideSubheader: 'true'}
     }
 ];

@@ -3,8 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalComponent } from './modal/modal.component';
-import { PageContentsModule } from "./home-page/page-contents.module";
+//import { ModalComponent } from './modal/modal.component';
 import { FooterComponent } from './footer/footer.component';
 
 @Component({
@@ -13,7 +12,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     ReactiveFormsModule,
-    ModalComponent,
+    //ModalComponent,
     FooterComponent
 ],
   templateUrl: './app.component.html',
