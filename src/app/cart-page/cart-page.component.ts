@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { QuantityChangeComponent } from '../quantity-change/quantity-change.component';
+//import { QuantityChangeComponent } from '../quantity-change/quantity-change.component';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { CartService } from '../cart.service';
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.scss',
   imports: [
-    QuantityChangeComponent,
+   // QuantityChangeComponent,
     CommonModule
   ]
 })

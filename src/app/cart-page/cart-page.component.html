@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row mt-5">
         <div class="col-md-7 cart-left">
             <div> &lt; Continue Shopping</div>
@@ -81,6 +81,111 @@
                     </button>
                 </form>
             </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container my-5">
+    <div class="row checkout-container">
+        <div class="shopping-cart col-md-7 offset-md-1">
+            <a href="#" class="mb-3 d-block continue-shopping-link"><span class="h6">&lt; Continue Shopping</span></a>
+            <hr>
+            <div class="mb-4">
+                <h5 class="mb-1">Shopping cart</h5>
+                <small>You have 3 item in your cart</small> 
+            </div>
+            
+            <div class="cart-item">
+                <img src="pizza.jpg" alt="Italy Pizza" class="product-image">
+                <div class="cart-item-details">
+                    <div class="h6 mb-1">Italy Pizza</div>
+                    <small>Extra cheese and toping</small>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <select class="form-select w-25">
+                            <option value="1" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">{{i}}</option>
+                        </select>
+                        <span>$681</span>
+                        <span style="cursor: pointer;">
+                            <img src="../../assets/cart/trash-can.png" height="20" width="20" alt="Trash Can">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="combo.jpg" alt="Combo Plate">
+                <div class="cart-item-details">
+                    <div class="h6 mb-1">Combo Plate</div>
+                    <small>Extra cheese and toping</small>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <select class="form-select w-25">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <span>$681</span>
+                        <button class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="rice.jpg" alt="Spanish Rice">
+                <div class="cart-item-details">
+                    <h5>Spanish Rice</h5>
+                    <p>Extra garlic</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <select class="form-select w-25">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <span>$681</span>
+                        <button class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-details col-md-3 offset-md-1">
+            <h4>Card Details</h4>
+            <div class="mb-3">
+                <label for="cardType" class="form-label">Card type</label>
+                <div class="card-type-icons">
+                    <img src="../../assets/cart/mastercard.svg" alt="Mastercard" height="55" width="75">
+                    <img src="../../assets/cart/visa.svg" alt="Visa" height="55" width="75">
+                    <img src="../../assets/cart/rupay.svg" alt="RuPay" height="55" width="75">
+                    <a href="#">See all</a>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="cardName" class="form-label">Name on card</label>
+                <input type="text" class="form-control" id="cardName" placeholder="Name">
+            </div>
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="1111 2222 3333 4444">
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label for="expiryDate" class="form-label">Expiration date</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="mm/yy">
+                </div>
+                <div class="col-6">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="123">
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                    <span>Subtotal</span>
+                    <span>$1,668</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Shipping</span>
+                    <span>$4</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Total (Tax Incl.)</span>
+                    <span class="total-amount">$1,672</span>
+                </div>
+            </div>
+            <button class="btn checkout-btn w-100">$1,672 Checkout -></button>
         </div>
     </div>
 </div>
