@@ -1,89 +1,3 @@
-<!-- <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-7 cart-left">
-            <div> &lt; Continue Shopping</div>
-            <hr/>
-            <div>
-                <h4>Shopping Cart</h4>
-                <p>You have {{cartItemsCount}} items in your cart</p>
-            </div>
-            <div *ngFor="let item of cartItems" class="cart-item">
-                <div class="d-flex justify-content-between card-horizontal">
-                    <div><img [src]="item.image" [alt]="item.name" height="60" width="60"></div>
-                    <div>
-                        {{item.name}}
-                    </div>
-                    <div>
-                        <app-quantity-change></app-quantity-change>
-                    </div>
-                    <div>
-                        {{item.price | currency: 'INR'}}
-                    </div>
-                    <div (click)="removeItem(item)">
-                        Delete
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-4 cart-right">
-            <h4 class="mb-3">
-                Card Details
-            </h4>
-            <div>
-                <div>Card Type</div>
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3"></div>
-                </div>
-                <form>
-                    <div class="mb-3">
-                      <label for="cardName" class="form-label">Name on Card</label>
-                      <input type="text" class="form-control" id="cardName">
-                      <div id="cardName" class="form-text" *ngIf="false">Incorrect name</div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="cardNumber" class="form-label">Card No.</label>
-                      <input type="text" class="form-control" id="cardNumber">
-                      <div id="cardNumber" class="form-text" *ngIf="false">Invalid card number</div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="cardExpiry" class="form-label">Expiration</label>
-                            <input type="text" class="form-control" id="cardExpiry">
-                            <div id="cardExpiry" class="form-text" *ngIf="false">Invalid date</div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="cardcvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cardNumber">
-                            <div id="cardNumber" class="form-text" *ngIf="false">Invalid cvv</div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between">
-                            <span>Subtotal</span>
-                            <span>₹100000</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <span>Shipping</span>
-                            <span>₹50</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div>(Tax Incl.)</div> 
-                            <span>₹100050</span>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-success col-md-12 btn-100 d-flex justify-content-between">
-                        <span>Checkout</span>
-                        <span>₹100050</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div class="container my-5">
     <div class="row checkout-container">
@@ -92,52 +6,23 @@
             <hr>
             <div class="mb-4">
                 <h5 class="mb-1">Shopping cart</h5>
-                <small>You have 3 item in your cart</small> 
+                <small>You have {{cartItemsCount}} item in your cart</small> 
             </div>
             
-            <div class="cart-item">
-                <img src="pizza.jpg" alt="Italy Pizza" class="product-image">
+            <div class="cart-item" *ngFor="let item of cartItems">
+                <img [src]="item.image" [alt]="item.name" class="product-image">
                 <div class="cart-item-details">
-                    <div class="h6 mb-1">Italy Pizza</div>
-                    <small>Extra cheese and toping</small>
+                    <div class="h6 mb-1">{{item.name}}</div>
                     <div class="d-flex justify-content-between align-items-center">
-                        <select class="form-select w-25">
-                            <option value="1" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">{{i}}</option>
+                        <select class="form-select w-25" [(ngModel)]="item.count">
+                            <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [value]="i" [selected]="i === item.count ? true : 1">
+                                {{ i }}
+                            </option>
                         </select>
-                        <span>$681</span>
+                        <span>{{item.price | currency : 'INR'}}</span>
                         <span style="cursor: pointer;">
                             <img src="../../assets/cart/trash-can.png" height="20" width="20" alt="Trash Can">
                         </span>
-                    </div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <img src="combo.jpg" alt="Combo Plate">
-                <div class="cart-item-details">
-                    <div class="h6 mb-1">Combo Plate</div>
-                    <small>Extra cheese and toping</small>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <select class="form-select w-25">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                        <span>$681</span>
-                        <button class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <img src="rice.jpg" alt="Spanish Rice">
-                <div class="cart-item-details">
-                    <h5>Spanish Rice</h5>
-                    <p>Extra garlic</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <select class="form-select w-25">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                        <span>$681</span>
-                        <button class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
                     </div>
                 </div>
             </div>
@@ -174,18 +59,18 @@
             <div class="mb-3">
                 <div class="d-flex justify-content-between">
                     <span>Subtotal</span>
-                    <span>$1,668</span>
+                    <span>Rs.1,668</span>
                 </div>
                 <div class="d-flex justify-content-between">
                     <span>Shipping</span>
-                    <span>$4</span>
+                    <span>Rs.4</span>
                 </div>
                 <div class="d-flex justify-content-between">
                     <span>Total (Tax Incl.)</span>
-                    <span class="total-amount">$1,672</span>
+                    <span class="total-amount">Rs. 1,672</span>
                 </div>
             </div>
-            <button class="btn checkout-btn w-100">$1,672 Checkout -></button>
+            <button class="btn checkout-btn w-100">Rs. 1,672 Checkout -></button>
         </div>
     </div>
 </div>

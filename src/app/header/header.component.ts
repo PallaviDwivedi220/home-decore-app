@@ -33,24 +33,24 @@ export class HeaderComponent implements OnInit, OnDestroy{
 
   async ngOnInit(): Promise<void> {
     this.cartService.cartCount$.subscribe((count) => {
-      this.cartCount = count; // Update cart count when it changes
+      this.cartCount = count; 
     });
 
     this.router.events
     .pipe(
-      filter((event) => event instanceof NavigationEnd), // Listen for navigation end events
-      map(() => this.activatedRoute), // Start with the root route
+      filter((event) => event instanceof NavigationEnd), 
+      map(() => this.activatedRoute), 
       map((route) => {
         while (route.firstChild) {
-          route = route.firstChild; // Navigate to the deepest child route
+          route = route.firstChild; 
         }
         return route;
       }),
-      map((route) => route.snapshot.data) // Access the data property
+      map((route) => route.snapshot.data) 
     )
     .subscribe((data) => {
       console.log('Route Data:', data);
-      this.showSubheader = data['hideSubheader'] !== 'true'; // Example usage
+      this.showSubheader = data['hideSubheader'] !== 'true'; 
     });
     
   }

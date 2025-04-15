@@ -10,13 +10,16 @@ export class CartService {
 
   private cartItems: any[] = [];
 
+  private cartItemsWithCounts: any[] = [];
+
   addToCart(item: any): void {
     this.cartItems.push(item);
     this.cartCountSource.next(this.cartItems.length); // Update cart count
   }
 
   getCartItems(): any[] {
-    return this.cartItems;
+    this.cartItemsWithCounts = this.getCartItemsWithCount(this.cartItems);
+    return this.cartItemsWithCounts;
   }
 
   removeItem(item: any): void {
@@ -33,21 +36,6 @@ export class CartService {
       this.cartItems[index].quantity = quantity;
     }
   }
-  addQuantity(item: any): void {
-    const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id);
-    if (cartItem) {
-      cartItem.quantity++;
-    }
-  }
-
-  removeQuantity(item: any): void {
-    const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id);
-    if (cartItem && cartItem.quantity > 1) {
-      cartItem.quantity--;
-    } else {
-      this.removeItem(item);
-    }
-  }
 
   getCartItemQuantity(item: any): number {
     const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id);
@@ -60,11 +48,35 @@ export class CartService {
 
   clearCart(): void {
     this.cartItems = [];
-    this.cartCountSource.next(0); // Reset cart count
+    this.cartCountSource.next(0); 
   }
 
 
   getCartCount(): number {
     return this.cartItems.length;
+  }
+
+
+  getCartItemsWithCount(arr: { id: number; name: string; image: string; price: string;  }[]): any[] {
+    const counts = new Map();
+    const uniqueObjects = [];
+  
+    for (const obj of arr) {
+      const key = JSON.stringify(obj); 
+      counts.set(key, (counts.get(key) || 0) + 1);
+    }
+  
+    for (const obj of arr) {
+      const key = JSON.stringify(obj);
+      if (counts.get(key) > 0) {
+        uniqueObjects.push({
+          ...obj,
+          count: counts.get(key),
+        });
+        counts.delete(key); 
+      }
+    }
+  
+    return uniqueObjects;
   }
 }

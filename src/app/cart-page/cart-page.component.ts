@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //import { QuantityChangeComponent } from '../quantity-change/quantity-change.component';
 import { CartService } from '../cart.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cart-page',
@@ -10,7 +11,8 @@ import { CartService } from '../cart.service';
   styleUrl: './cart-page.component.scss',
   imports: [
    // QuantityChangeComponent,
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class CartPageComponent implements OnInit{
@@ -21,12 +23,10 @@ export class CartPageComponent implements OnInit{
 
   ngOnInit() {
     this.cartService.cartCount$.subscribe((count) => {
-      console.log('Cart count updated:', count);
       this.cartItemsCount = count;
     });
 
     this.cartItems = this.cartService.getCartItems();
-    
   }
 
   get totalPrice() {
@@ -40,12 +40,7 @@ export class CartPageComponent implements OnInit{
   updateQuantity(item: any, quantity: number) {
     this.cartService.updateQuantity(item, quantity);
   }
-  addQuantity(item: any) {
-    this.cartService.addQuantity(item);
-  }
-  removeQuantity(item: any) {
-    this.cartService.removeQuantity(item);
-  }
+
   getCartItemQuantity(item: any) {
     return this.cartService.getCartItemQuantity(item);
   }
