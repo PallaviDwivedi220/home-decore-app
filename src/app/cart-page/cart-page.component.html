@@ -19,7 +19,7 @@
                                 {{ i }}
                             </option>
                         </select>
-                        <span>{{item.price | currency : 'INR'}}</span>
+                        <span>{{item.price | currency : 'INR' }}</span>
                         <span style="cursor: pointer;">
                             <img src="../../assets/cart/trash-can.png" height="20" width="20" alt="Trash Can">
                         </span>
@@ -59,18 +59,19 @@
             <div class="mb-3">
                 <div class="d-flex justify-content-between">
                     <span>Subtotal</span>
-                    <span>Rs.1,668</span>
+                    <span>{{cartTotal | currency : 'INR'}}</span>
                 </div>
                 <div class="d-flex justify-content-between">
                     <span>Shipping</span>
-                    <span>Rs.4</span>
+                    <span *ngIf="cartItemsCount > 0">{{200 | currency: 'INR'}}</span>
+                    <span *ngIf="cartItemsCount === 0">{{0 | currency: 'INR'}}</span>
                 </div>
                 <div class="d-flex justify-content-between">
                     <span>Total (Tax Incl.)</span>
-                    <span class="total-amount">Rs. 1,672</span>
+                    <span class="total-amount">{{cartTotal | currency: 'INR'}}</span>
                 </div>
             </div>
-            <button class="btn checkout-btn w-100">Rs. 1,672 Checkout -></button>
+            <button class="btn checkout-btn w-100" *ngIf="cartItemsCount > 0">{{cartTotal | currency : 'INR'}} Checkout -></button>
         </div>
     </div>
 </div>

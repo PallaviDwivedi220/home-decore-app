@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 //import { QuantityChangeComponent } from '../quantity-change/quantity-change.component';
 import { CartService } from '../cart.service';
 import { FormsModule } from '@angular/forms';
+import { SquarePipe } from '../square.pipe';
 
 @Component({
   selector: 'app-cart-page',
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 export class CartPageComponent implements OnInit{
   cartItems: any[] = [];
   cartItemsCount: number = 0;
+  cartTotal: number | undefined;
   constructor(private cartService: CartService) {
   }
 
@@ -27,6 +29,7 @@ export class CartPageComponent implements OnInit{
     });
 
     this.cartItems = this.cartService.getCartItems();
+    this.cartTotal = this.cartService.getTotalPrice();
   }
 
   get totalPrice() {

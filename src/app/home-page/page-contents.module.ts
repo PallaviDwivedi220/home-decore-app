@@ -8,6 +8,7 @@ import { FeaturesComponent } from '../home-page/components/features/features.com
 import { BestSellersComponent } from '../home-page/components/best-sellers/best-sellers.component';
 import { NewArrivalsComponent } from '../home-page/components/new-arrivals/new-arrivals.component';
 import { PartnersComponent } from './components/partners/partners.component';
+import { SquarePipe } from '../square.pipe';
 
 @NgModule({
   declarations: [
